@@ -1,3 +1,4 @@
+
 # Admin Dashboard
 
 This directory contains the frontend for the Admin Dashboard application. It is built using Next.js, React, and Tailwind CSS.
@@ -9,8 +10,6 @@ This directory contains the frontend for the Admin Dashboard application. It is 
 - [Running the Development Server](#running-the-development-server)
 - [Building for Production](#building-for-production)
 - [Project Structure](#project-structure)
-- [Learn More](#learn-more)
-- [Deploy on Vercel](#deploy-on-vercel)
 
 ## Getting Started
 
@@ -20,46 +19,68 @@ First, install the dependencies:
 npm install
 ```
 
+## Configuration
+
+Create a `.env.local` file in the root directory to configure the API base URL and other environment variables:
+
+```env
+NEXT_PUBLIC_API_BASE_URL=http://localhost:5000/api
+```
+
+Replace the URL with the backend server's URL when deploying to production.
+
 ## Running the Development Server
+
 To start the development server, run:
+
 ```sh
 npm run dev
 ```
 
-Open [http://localhost:3000] with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
 You can start editing the page by modifying `src/app/page.js`. The page auto-updates as you edit the file.
 
+## Building for Production
+
+To build the application for production, run:
+
+```sh
+npm run build
+```
+
+This will create an optimized production build in the `.next` folder.
+
 ## Project Structure
 
+```
 admin_dashboard/
-  [.eslintrc.json](http://_vscodecontentref_/2)
-  .gitignore
-  .next/
-  [components.json](http://_vscodecontentref_/3)
-  [jsconfig.json](http://_vscodecontentref_/4)
-  [next.config.mjs](http://_vscodecontentref_/5)
-  [package.json](http://_vscodecontentref_/6)
-  [postcss.config.mjs](http://_vscodecontentref_/7)
-  public/
-  [README.md](http://_vscodecontentref_/8)
-  src/
-    app/
-      [globals.css](http://_vscodecontentref_/9)
-      [layout.js](http://_vscodecontentref_/10)
-      [page.js](http://_vscodecontentref_/11)
-    components/
-      ...
-    hooks/
-      ...
-    lib/
-      ...
-    services/
-      ...
-  [tailwind.config.js](http://_vscodecontentref_/12)
+├── .eslintrc.json
+├── .gitignore
+├── .next/
+├── components/
+├── hooks/
+├── jsconfig.json
+├── next.config.mjs
+├── package.json
+├── postcss.config.mjs
+├── public/
+├── README.md
+├── src/
+│   ├── app/
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   └── page.js
+│   ├── components/
+│   ├── hooks/
+│   ├── lib/
+│   └── services/
+├── tailwind.config.js
+```
 
-src/app: Contains the main application files.
-src/components: Contains the React components used in the application.
-src/hooks: Contains custom hooks.
-src/lib: Contains utility functions.
-src/services: Contains API service files.
+- `src/app`: Contains the main application files, including layout and page definitions.
+- `src/components`: Contains reusable React components.
+- `src/hooks`: Contains custom React hooks.
+- `src/lib`: Contains utility functions.
+- `src/services`: Contains API service files.
+
