@@ -3,6 +3,8 @@
 
 This directory contains the frontend for the Admin Dashboard application. It is built using Next.js, React, and Tailwind CSS.
 
+The backend for this project is avaiable [here](https://github.com/ViragJain3010/Admin-Dashboard) 
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
